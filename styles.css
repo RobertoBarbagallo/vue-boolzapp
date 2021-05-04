@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #D9DCD4;
+}
+
+header{
+    background-color: #009688;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+
+}
+
+main{
+    height: 80vh;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #ECEDEE;
+    position: relative;
+    top: 10vh;
+    display: flex;
+}
+
+aside{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.userbar{
+    display: flex;
+    height: 60px;
+    padding: 5px;
+    border-right: 1px solid #D1D2D3;
+    background-color: #ECEDEE;
+}
+
+.userbar .img-container{
+    height: 40px;
+    width: 40px;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.whitespace{
+    flex-grow: 1;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    color: #6A746F; 
+}
+
+.instruments{
+    display: flex;
+    align-items: center;
+}
+.instruments i{
+    margin: 0 8px;
+}
+
+.notifications{
+    background-color: #9CE1FF;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.bellcontainer{
+    background-color: white;
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.textcontainer h4{
+    font-size: 12px;
+    color: #6A746F; 
+}
+
+.textcontainer p{
+    color: #6A746F; 
+}
+
+.inputcontainer{
+    padding: 5px 10px;
+    position: relative;
+}
+
+.inputcontainer i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+.inputcontainer input{
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+    text-align: right;
+    padding: 5px 10px; 
+}
+
+.userdiv{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.userdiv:hover{
+    background-color: #D3D4D5;
+}
+
+.userimg{
+    width: 50px;
+    height: 50px;
+}
+.userimg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+article{
+    width: 70%;
+    background-image: url(imgs/mine.jpg);
+}
+
+.messagerow{
+    padding: 10px;
+    display: flex;
+}
+
+.left{
+    justify-content: flex-start;
+}
+
+.right{
+    justify-content: flex-end;
+}
+
+.messagebaloon{
+    border-radius: 8px;;
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+}
+
+.green{
+    background-color: #E0F9CB;
+
+}
+
+.white{
+    background-color: bisque;
+}

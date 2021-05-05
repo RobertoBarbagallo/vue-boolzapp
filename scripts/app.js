@@ -3,12 +3,9 @@ const app = new Vue({
     data: {
         usersList: globalUsersList,
         clickedUser: "",
-        darker: false,
         userMessage: "",
         timeOut: null,
         searchedUser: "",
-
-
     },
 
     computed: {
@@ -37,7 +34,6 @@ const app = new Vue({
 
     methods: {
         onUserClick(myUser) {
-            this.darker = !this.darker;
             return this.clickedUser = myUser;
         },
 

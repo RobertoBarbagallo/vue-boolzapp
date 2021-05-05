@@ -94,20 +94,25 @@ aside{
 }
 
 .textcontainer{
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     flex-grow: 1;
+    position: relative;
 }
 
 .textcontainer h4{
-    font-size: 12px;
+    font-size: 16px;
     color: #6A746F; 
 }
 
 .textcontainer p{
+    font-size: 12px;
     color: #6A746F; 
+}
+
+.notifications .textcontainer p{
     text-decoration: underline;
 }
 
@@ -245,4 +250,10 @@ article{
     flex-grow: 1;
     padding: 5px;
     border: 1px solid #7F8081;
+}
+
+.time{
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }

@@ -27,9 +27,9 @@ const app = new Vue({
             } else if (!this.searchedUser) {
                 return "";
             } else {
-                return this.usersList.filter(element => element.name.toLowerCase().includes(this.searchedUser.toLowerCase()));
+                return this.usersList.filter(element => element.name.toLowerCase().startsWith(this.searchedUser.toLowerCase()));
             }
-        }
+        },
     },
 
     methods: {
@@ -48,18 +48,37 @@ const app = new Vue({
                 status: 'sent'
             });
             this.AIanswer();
+            this.userMessage = "";
         },
 
         AIanswer() {
             this.time, Out = setTimeout(this.answer, 1000);
         },
+
         answer() {
             this.clickedUser.messages.push({
                 date: moment(),
                 text: "Ok",
                 status: 'received'
             });
-        }
+        },
+
+        getUserLastMsg(user) {
+            const receivedMsgs = user.messages.filter(msgs => msgs.status === "received");
+
+
+            return receivedMsgs[receivedMsgs.length - 1].text;
+           
+        },
+
+        getUserLastAccess(user) {
+            const receivedMsgs = user.messages.filter(msgs => msgs.status === "received");
+
+
+            const lastAccess = receivedMsgs[receivedMsgs.length - 1].date;
+
+            return this.formatTime(lastAccess);
+        },
     },
 
     mounted() {

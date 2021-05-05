@@ -42,10 +42,10 @@
                 </div>
                 <div class="inputcontainer">
                     <i class="fa fa-search" aria-hidden="true"></i>
-                    <input placeholder="Cerca o inizia una nuova chat" type="text">
+                    <input v-model="searchedUser" placeholder="Cerca o inizia una nuova chat" type="text">
                 </div>
                 <div class="flexoverflowcontainer">
-                    <div @click="onUserClick(user)" v-for="user in usersList" class="userdiv">
+                    <div @click="onUserClick(user)" v-for="user in searchUser" class="userdiv">
                         <div class="userimg">
                            <img :src="user.avatar" alt="">
                         </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="messageinputarea">
                     <i class="fa fa-smile-o" aria-hidden="true"></i>
-                    <input type="text">
+                    <input @keyup.enter="userMessagePush()" v-model="userMessage" type="text">
                     <i class="fa fa-microphone" aria-hidden="true"></i>
                 </div>
                </article>

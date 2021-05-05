@@ -127,7 +127,7 @@ aside{
     border: 1px solid #7F8081;
 }
 
-.inputcontainer input:focus{
+input:focus{
     outline: none;
 }
 

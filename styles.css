@@ -17,13 +17,13 @@ header{
 }
 
 main{
-    height: 80vh;
+    height: 86vh;
     width: 80%;
     max-width: 1200px;
     margin: auto;
     background-color: #ECEDEE;
     position: relative;
-    top: 10vh;
+    top: 7vh;
     display: flex;
 }
 
@@ -88,6 +88,7 @@ aside{
     justify-content: center;
     align-items: center;
 }
+
 .bellcontainer i{
     color: #9CE1FF;
 }
@@ -213,10 +214,12 @@ article{
     right: -10px;
     top: 0;
 }
+
 .white{
     background-color: white;
     align-self: flex-start;
 }
+
 .white::after{
     content: "";
     width: 0;
@@ -236,8 +239,6 @@ article{
     align-items: center;
     border-left: 1px solid #D1D2D3;
 }
-
-
 
 .messageinputarea input{
     border-radius: 20px;

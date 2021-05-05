@@ -1,7 +1,7 @@
 const globalUsersList = [
     {
         name: 'Michele',
-        avatar: 'imgs/avatar_1.jpg',
+        avatar: '1',
         visible: true,
         messages: [
             {
@@ -23,7 +23,7 @@ const globalUsersList = [
     },
     {
         name: 'Fabio',
-        avatar: 'imgs/avatar_2.jpg',
+        avatar: '2',
         visible: true,
         messages: [
             {
@@ -44,7 +44,7 @@ const globalUsersList = [
         ],
     }, {
         name: 'Samuele',
-        avatar: 'imgs/avatar_3.jpg',
+        avatar: '3',
         visible: true,
         messages: [
             {
@@ -66,7 +66,7 @@ const globalUsersList = [
     },
     {
         name: 'Luisa',
-        avatar: 'imgs/avatar_6.jpg',
+        avatar: '6',
         visible: true,
         messages: [
             {

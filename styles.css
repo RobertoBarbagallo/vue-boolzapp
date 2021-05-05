@@ -14,7 +14,6 @@ header{
     width: 100%;
     position: absolute;
     z-index: 0;
-
 }
 
 main{
@@ -89,6 +88,9 @@ aside{
     justify-content: center;
     align-items: center;
 }
+.bellcontainer i{
+    color: #9CE1FF;
+}
 
 .textcontainer{
     display: flex;
@@ -105,6 +107,7 @@ aside{
 
 .textcontainer p{
     color: #6A746F; 
+    text-decoration: underline;
 }
 
 .inputcontainer{
@@ -143,6 +146,10 @@ input:focus{
     display: flex;
     align-items: center;
     background-color: white;
+}
+
+.darker{
+    background-color: #8b8b8b;
 }
 
 .userdiv:hover{

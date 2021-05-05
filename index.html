@@ -45,9 +45,9 @@
                     <input v-model="searchedUser" placeholder="Cerca o inizia una nuova chat" type="text">
                 </div>
                 <div class="flexoverflowcontainer">
-                    <div @click="onUserClick(user)" v-for="user in searchUser" class="userdiv">
+                    <div @click="onUserClick(user)" v-for="user in searchUser" class="userdiv" :class="{darker: user.avatar == clickedUser.avatar}">
                         <div class="userimg">
-                           <img :src="user.avatar" alt="">
+                           <img :src="`imgs/avatar_${user.avatar}.jpg`" alt="">
                         </div>
                         <div class="textcontainer">
                             <h4> {{user.name}} </h4>
@@ -60,7 +60,7 @@
                <article>
                 <div class="userbar">
                     <div class="img-container">
-                        <img :src="clickedUser.avatar" alt="">
+                        <img :src="`imgs/avatar_${clickedUser.avatar}.jpg`" alt="">
                     </div>
                     <div class="whitespace">
                         <h4>{{clickedUser.name}}</h4>

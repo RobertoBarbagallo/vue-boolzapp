@@ -28,6 +28,11 @@ main{
     display: flex;
 }
 
+i{
+    margin: 0 12px;
+    color: #7F8081;
+}
+
 aside{
     width: 30%;
     display: flex;
@@ -57,16 +62,14 @@ aside{
     flex-grow: 1;
     padding: 5px;
     display: flex;
-    align-items: center;
+    justify-items: center;
     color: #6A746F; 
+    flex-direction: column;
 }
 
 .instruments{
     display: flex;
     align-items: center;
-}
-.instruments i{
-    margin: 0 8px;
 }
 
 .notifications{
@@ -120,14 +123,26 @@ aside{
     width: 100%;
     margin: auto;
     border-radius: 20px;
-    text-align: right;
-    padding: 5px 10px; 
+    padding: 5px 10px 5px 50px;
+    border: 1px solid #7F8081;
+}
+
+.inputcontainer input:focus{
+    outline: none;
+}
+
+.flexoverflowcontainer{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
 }
 
 .userdiv{
     padding: 5px;
     display: flex;
     align-items: center;
+    background-color: white;
 }
 
 .userdiv:hover{
@@ -147,19 +162,15 @@ aside{
 article{
     width: 70%;
     background-image: url(imgs/mine.jpg);
+    display: flex;
+    flex-direction: column;
 }
 
 .messagerow{
     padding: 10px;
     display: flex;
-}
-
-.left{
-    justify-content: flex-start;
-}
-
-.right{
-    justify-content: flex-end;
+    width: 100%;
+    flex-direction: column;
 }
 
 .messagebaloon{
@@ -167,13 +178,63 @@ article{
     padding: 10px;
     text-align: center;
     width: 20%;
+    position: relative;
+    margin: 10px;
+}
+
+.messagebaloon p{
+    font-size: 10px;
+    color: #6A746F;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
 }
 
 .green{
     background-color: #E0F9CB;
-
+    align-self: flex-end;
 }
 
+.green::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 10px 0 10px;
+    border-color: #E0F9CB transparent transparent transparent;
+    position: absolute;
+    right: -10px;
+    top: 0;
+}
 .white{
-    background-color: bisque;
+    background-color: white;
+    align-self: flex-start;
+}
+.white::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 10px 0 10px;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    left: -10px;
+    top: 0;
+}
+
+.messageinputarea{
+    height: 60px;
+    background-color: #ECEDEE;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #D1D2D3;
+}
+
+
+
+.messageinputarea input{
+    border-radius: 20px;
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #7F8081;
 }

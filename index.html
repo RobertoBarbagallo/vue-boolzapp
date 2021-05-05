@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <title>Boolzapp</title>
+    </head>
+    <body>
+        <div id="app">
+            <header>
+            </header>
+            <main>
+               <aside>
+                <div class="userbar">
+                    <div class="img-container">
+                        <img src="imgs/avatar_2.jpg" alt="">
+                    </div>
+                    <div class="whitespace">
+
+                    </div>
+                    <div class="instruments">
+                        <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="notifications">
+                    <div class="bellcontainer">
+                        <i class="fa fa-bell-slash" aria-hidden="true"></i>
+                    </div>
+                    <div class="textcontainer">
+                        <h4>Ricevi notifiche di nuovi messaggi</h4>
+                        <p>Attiva notifiche desktop</p>
+                    </div>
+                </div>
+                <div class="inputcontainer">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input placeholder="Cerca o inizia una nuova chat" type="text">
+                </div>
+                <div class="flexoverflowcontainer">
+                    <div @click="onUserClick(user)" v-for="user in usersList" class="userdiv">
+                        <div class="userimg">
+                           <img :src="user.avatar" alt="">
+                        </div>
+                        <div class="textcontainer">
+                            <h4> {{user.name}} </h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+               </aside>
+               <article>
+                <div class="userbar">
+                    <div class="img-container">
+                        <img :src="clickedUser.avatar" alt="">
+                    </div>
+                    <div class="whitespace">
+                        <h4>{{clickedUser.name}}</h4>
+                        <p>Ultimo accesso alle ore {{getLastAccess}} </p>
+                    </div>
+                    <div class="instruments">
+                       
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i class="fa fa-paperclip" aria-hidden="true"></i>
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="flexoverflowcontainer">
+                    <div v-for="message in clickedUser.messages" class="messagerow">
+                        <div :class=" message.status === 'sent'? 'green' : 'white' " class="messagebaloon">
+                            <p>{{formatTime(message.date)}}</p>
+                            {{message.text}}
+                        </div>
+                    </div>
+                </div>
+                <div class="messageinputarea">
+                    <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    <input type="text">
+                    <i class="fa fa-microphone" aria-hidden="true"></i>
+                </div>
+               </article>
+            </main>
+        </div>
+        <script src="scripts/data.js"></script>
+        <script src="scripts/app.js"></script>
+    </body>
+</html>

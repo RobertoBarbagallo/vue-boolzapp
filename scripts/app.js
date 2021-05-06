@@ -6,6 +6,7 @@ const app = new Vue({
         userMessage: "",
         timeOut: null,
         searchedUser: "",
+      
     },
 
     computed: {
@@ -15,7 +16,7 @@ const app = new Vue({
             }
             const receivedMsgs = this.clickedUser.messages.filter(msgs => msgs.status === "received");
 
-            
+
             if (receivedMsgs.length == 0) {
                 return "";
             }
@@ -40,6 +41,10 @@ const app = new Vue({
         },
 
         userMessagePush() {
+            if(this.icon === "microphone"){
+                return 
+            }
+
             const currentUser = this.clickedUser;
             currentUser.messages.push({
                 date: moment().format("DD/MM/YYYY HH:mm:ss"),
@@ -102,11 +107,17 @@ const app = new Vue({
 
         messageDelete(message) {
             this.clickedUser.messages.splice(message, 1);
-        }
+        },
+
+     
 
     },
 
     mounted() {
         this.clickedUser = this.usersList[0];
+
+    //    this.usersList.forEach(user =>{
+    //         user.messages.forEach(message => message.active = false)
+    //     }) 
     }
 })

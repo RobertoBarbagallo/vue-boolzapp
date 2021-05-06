@@ -286,6 +286,11 @@ article{
     border: 1px solid #7F8081;
 }
 
+.fa-paper-plane:hover{
+    color: rgb(0, 157, 255);
+  
+}
+
 .time{
     position: absolute;
     right: 0;

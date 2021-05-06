@@ -75,7 +75,8 @@
                     </div>
                 </div>
                 <div class="flexoverflowcontainer" ref="chat">
-                    <div v-for="message in clickedUser.messages" class="messagerow">
+                    <div  v-for="message in clickedUser.messages" class="messagerow">
+               
                         <div :class=" message.status === 'sent'? 'green' : 'white' " class="messagebaloon">
                             <i @click="activeDefine(message)" class="fa fa-chevron-down" aria-hidden="true"></i>
                             <p>{{formatTime(message.date)}}</p>
@@ -85,13 +86,15 @@
                                 <h4 @click="messageDelete(message)">Delete Message</h4>
                             </div>
                         </div>
+                      
                     </div>
                 </div>
                 <div class="messageinputarea">
                     <i class="fa fa-smile-o" aria-hidden="true"></i>
                     <input @keyup.enter="userMessagePush()" v-model="userMessage" type="text">
-                    <i class="fa fa-microphone" aria-hidden="true"></i>
-                    
+                    <i @click="userMessagePush()" v-if= "userMessage" class="fa fa-paper-plane" aria-hidden="true"></i>
+                    <i v-else class="fa fa-microphone" aria-hidden="true"></i>
+                
                 </div>
                </article>
             </main>

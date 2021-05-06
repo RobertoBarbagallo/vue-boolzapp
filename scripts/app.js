@@ -15,6 +15,10 @@ const app = new Vue({
             }
             const receivedMsgs = this.clickedUser.messages.filter(msgs => msgs.status === "received");
 
+            
+            if (receivedMsgs.length == 0) {
+                return "";
+            }
 
             const lastAccess = receivedMsgs[receivedMsgs.length - 1].date;
 
@@ -22,14 +26,8 @@ const app = new Vue({
         },
 
         searchUser() {
-            if (this.searchedUser == "") {
-                return this.usersList;
-            } else if (!this.searchedUser) {
-                return "";
-            } else {
-                return this.usersList.filter(element => element.name.toLowerCase().startsWith(this.searchedUser.toLowerCase()));
-            }
-        },
+            return this.usersList.filter(element => element.name.toLowerCase().startsWith(this.searchedUser.toLowerCase()));
+        }
     },
 
     methods: {
@@ -42,43 +40,70 @@ const app = new Vue({
         },
 
         userMessagePush() {
-            this.clickedUser.messages.push({
-                date: moment(),
+            const currentUser = this.clickedUser;
+            currentUser.messages.push({
+                date: moment().format("DD/MM/YYYY HH:mm:ss"),
                 text: this.userMessage,
                 status: 'sent'
             });
-            this.AIanswer();
             this.userMessage = "";
+            this.scrollToBottom();
+            setTimeout(() => {
+                this.answer(currentUser);
+            }, 2000);
         },
 
-        AIanswer() {
-            this.time, Out = setTimeout(this.answer, 1000);
-        },
 
-        answer() {
-            this.clickedUser.messages.push({
-                date: moment(),
+
+        answer(currentUser) {
+            currentUser.messages.push({
+                date: moment().format("DD/MM/YYYY HH:mm:ss"),
                 text: "Ok",
                 status: 'received'
             });
+            this.scrollToBottom();
         },
 
         getUserLastMsg(user) {
+            if (!this.clickedUser.messages) {
+                return "";
+            }
             const receivedMsgs = user.messages.filter(msgs => msgs.status === "received");
-
+            if (receivedMsgs.length == 0) {
+                return "";
+            }
 
             return receivedMsgs[receivedMsgs.length - 1].text;
-           
+
         },
 
         getUserLastAccess(user) {
             const receivedMsgs = user.messages.filter(msgs => msgs.status === "received");
 
+            if (receivedMsgs.length == 0) {
+                return "";
+            }
 
             const lastAccess = receivedMsgs[receivedMsgs.length - 1].date;
 
             return this.formatTime(lastAccess);
         },
+
+        scrollToBottom() {
+            this.$nextTick(() => {
+                const htmlElement = this.$refs.chat;
+                htmlElement.scrollTop = htmlElement.scrollHeight;
+            });
+        },
+
+        activeDefine(message) {
+            message.active = !message.active;
+        },
+
+        messageDelete(message) {
+            this.clickedUser.messages.splice(message, 1);
+        }
+
     },
 
     mounted() {

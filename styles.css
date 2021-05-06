@@ -188,11 +188,15 @@ article{
 
 .messagebaloon{
     border-radius: 8px;;
-    padding: 10px;
+    padding: 5px 20px 5px 5px;
     text-align: center;
     width: 20%;
     position: relative;
-    margin: 10px;
+    margin: 10px
+}
+
+.messagebaloon:hover i{
+    display: block;
 }
 
 .messagebaloon p{
@@ -201,6 +205,14 @@ article{
     position: absolute;
     bottom: 0;
     right: 5px;
+}
+
+.messagebaloon i{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 10px;
+    display: none;
 }
 
 .green{
@@ -223,6 +235,28 @@ article{
 .white{
     background-color: white;
     align-self: flex-start;
+}
+
+.popup{
+    background-color: #ecedee;
+    position: absolute;
+    padding: 5px;
+    height: 50px;
+    width: 100px;
+    z-index: 2;
+    top: 15px;
+    right: 20px;
+    border-radius: 8px;
+}
+
+.popup h4{
+    font-size: 12px;
+    margin: 5px;
+    font-weight: 100;  
+}
+
+.popup h4:hover{
+    background-color: #D3D4D5;
 }
 
 .white::after{

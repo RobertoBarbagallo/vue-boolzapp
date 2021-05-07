@@ -78,7 +78,7 @@ const app = new Vue({
                 return "";
             }
 
-            return receivedMsgs[receivedMsgs.length - 1].text;
+            return receivedMsgs[receivedMsgs.length - 1].text.slice(0, 20) + "...";
 
         },
 

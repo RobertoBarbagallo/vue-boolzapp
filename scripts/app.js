@@ -78,7 +78,15 @@ const app = new Vue({
                 return "";
             }
 
-            return receivedMsgs[receivedMsgs.length - 1].text.slice(0, 20) + "...";
+            let msg = receivedMsgs[receivedMsgs.length - 1];
+
+            let trimmedMsg = msg.text.slice(0, 20);
+
+            if (msg.text.length > 20) {
+                trimmedMsg = trimmedMsg + "...";
+            }
+
+            return trimmedMsg;
 
         },
 
@@ -107,11 +115,11 @@ const app = new Vue({
 
         showPopUpDefine(message, event) {
             message.showPopUp = true;
-            event.currentTarget.focus()
+            event.currentTarget.focus();
         },
 
-        onFocusLost(message){
-            message.showPopUp = false
+        onFocusLost(message) {
+            message.showPopUp = false;
         },
 
         messageDelete(index) {

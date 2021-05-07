@@ -105,8 +105,13 @@ const app = new Vue({
             message.active = !message.active;
         },
 
-        showPopUpDefine(message) {
-            message.showPopUp = !message.showPopUp;
+        showPopUpDefine(message, event) {
+            message.showPopUp = true;
+            event.currentTarget.focus()
+        },
+
+        onFocusLost(message){
+            message.showPopUp = false
         },
 
         messageDelete(message) {

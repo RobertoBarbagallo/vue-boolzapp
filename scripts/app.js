@@ -6,7 +6,7 @@ const app = new Vue({
         userMessage: "",
         timeOut: null,
         searchedUser: "",
-      
+
     },
 
     computed: {
@@ -41,8 +41,8 @@ const app = new Vue({
         },
 
         userMessagePush() {
-            if(this.icon === "microphone"){
-                return 
+            if (this.icon === "microphone") {
+                return;
             }
 
             const currentUser = this.clickedUser;
@@ -105,19 +105,25 @@ const app = new Vue({
             message.active = !message.active;
         },
 
+        showPopUpDefine(message) {
+            message.showPopUp = !message.showPopUp;
+        },
+
         messageDelete(message) {
             this.clickedUser.messages.splice(message, 1);
         },
 
-     
+
 
     },
 
     mounted() {
         this.clickedUser = this.usersList[0];
 
-    //    this.usersList.forEach(user =>{
-    //         user.messages.forEach(message => message.active = false)
-    //     }) 
+        this.usersList.forEach(user => {
+            user.messages.forEach(message => {
+                this.$set(message, "showPopUp", false);
+            });
+        });
     }
 })

@@ -78,10 +78,10 @@
                     <div  v-for="message in clickedUser.messages" class="messagerow">
                
                         <div :class=" message.status === 'sent'? 'green' : 'white' " class="messagebaloon">
-                            <i @click="activeDefine(message)" class="fa fa-chevron-down" aria-hidden="true"></i>
+                            <i  @click="showPopUpDefine(message)" class="fa fa-chevron-down" aria-hidden="true"></i>
                             <p>{{formatTime(message.date)}}</p>
                             {{message.text}}
-                            <div class="popup" v-if="message.active">
+                            <div class="popup" v-if="message.showPopUp">
                                 <h4>Message info</h4>
                                 <h4 @click="messageDelete(message)">Delete Message</h4>
                             </div>

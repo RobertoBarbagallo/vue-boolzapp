@@ -114,8 +114,8 @@ const app = new Vue({
             message.showPopUp = false
         },
 
-        messageDelete(message) {
-            this.clickedUser.messages.splice(message, 1);
+        messageDelete(index) {
+            this.clickedUser.messages.splice(index, 1);
         },
 
 

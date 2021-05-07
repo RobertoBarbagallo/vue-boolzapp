@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="flexoverflowcontainer" ref="chat">
-                    <div  v-for="message in clickedUser.messages" class="messagerow">
+                    <div  v-for="(message, index) in clickedUser.messages" class="messagerow">
                
                         <div tabindex="-1" @blur="onFocusLost(message)" :class=" message.status === 'sent'? 'green' : 'white' " class="messagebaloon">
                             <i  @click="showPopUpDefine(message, $event)" class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -83,7 +83,7 @@
                             {{message.text}}
                             <div class="popup" v-if="message.showPopUp">
                                 <h4>Message info</h4>
-                                <h4 @click="messageDelete(message)">Delete Message</h4>
+                                <h4 @click="messageDelete(index)">Delete Message</h4>
                             </div>
                         </div>
                       

@@ -9,7 +9,7 @@ const globalUsersList = [
                 text: 'Hai portato a spasso il cane?',
                 status: 'sent',
                 active: false,
-                //showPopUp: false,
+            
 
             },
             {
@@ -17,7 +17,7 @@ const globalUsersList = [
                 text: 'Ricordati di dargli da mangiare',
                 status: 'sent',
                 active: false,
-                //showPopUp: false,
+            
 
             },
             {
@@ -25,7 +25,7 @@ const globalUsersList = [
                 text: 'Tutto fatto!',
                 status: 'received',
                 active: false,
-                //showPopUp: false,
+            
 
             }
         ],
@@ -40,7 +40,7 @@ const globalUsersList = [
                 text: 'Ciao come stai?',
                 status: 'sent',
                 active: false,
-                showPopUp: false,
+    
 
             },
             {
@@ -48,7 +48,7 @@ const globalUsersList = [
                 text: 'Bene grazie! Stasera ci vediamo?',
                 status: 'received',
                 active: false,
-                showPopUp: false,
+    
 
             },
             {
@@ -56,7 +56,7 @@ const globalUsersList = [
                 text: 'Mi piacerebbe ma devo andare a fare la spesa.',
                 status: 'sent',
                 active: false,
-                showPopUp: false,
+    
 
             }
         ],
@@ -70,7 +70,7 @@ const globalUsersList = [
                 text: 'La Marianna va in campagna',
                 status: 'received',
                 active: false,
-                showPopUp: false,
+    
 
             },
             {
@@ -78,7 +78,7 @@ const globalUsersList = [
                 text: 'Sicuro di non aver sbagliato chat?',
                 status: 'sent',
                 active: false,
-                showPopUp: false,
+    
 
             },
             {
@@ -86,7 +86,7 @@ const globalUsersList = [
                 text: 'Ah scusa!',
                 status: 'received',
                 active: false,
-                showPopUp: false,
+    
 
             }
         ],
@@ -101,7 +101,7 @@ const globalUsersList = [
                 text: 'Lo sai che ha aperto una nuova pizzeria?',
                 status: 'sent',
                 active: false,
-                showPopUp: false,
+    
 
             },
             {
@@ -109,7 +109,7 @@ const globalUsersList = [
                 text: 'Si, ma preferirei andare al cinema',
                 status: 'received',
                 active: false,
-                //showPopUp: false,
+            
 
             }
         ],

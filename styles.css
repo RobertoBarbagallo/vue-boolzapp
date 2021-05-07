@@ -240,19 +240,20 @@ article{
 .popup{
     background-color: #ecedee;
     position: absolute;
-    padding: 5px;
-    height: 50px;
     width: 100px;
     z-index: 2;
     top: 15px;
     right: 20px;
     border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+    overflow: hidden;
 }
 
 .popup h4{
     font-size: 12px;
-    margin: 5px;
-    font-weight: 100;  
+    padding: 10px;
+    font-weight: 100;
+    transition: background-color .3s;  
 }
 
 .popup h4:hover{

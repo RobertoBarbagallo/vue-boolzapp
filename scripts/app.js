@@ -6,6 +6,7 @@ const app = new Vue({
         userMessage: "",
         timeOut: null,
         searchedUser: "",
+        counter: 0
 
     },
 
@@ -100,6 +101,7 @@ const app = new Vue({
             const lastAccess = receivedMsgs[receivedMsgs.length - 1].date;
 
             return this.formatTime(lastAccess);
+
         },
 
         scrollToBottom() {
@@ -125,6 +127,18 @@ const app = new Vue({
         messageDelete(index) {
             this.clickedUser.messages.splice(index, 1);
         },
+
+        notSwitch() {
+            this.counter += 1
+        },
+
+        counterControl(){
+            if(this.counter % 2 === 0){
+                return true
+            }else{
+                return false
+            }
+        }
 
 
 

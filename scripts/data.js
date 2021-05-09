@@ -114,4 +114,146 @@ const globalUsersList = [
             }
         ],
     },
+    {
+        name: 'Luca',
+        avatar: '4',
+        visible: true,
+        messages: [
+            {
+                date: '17/01/2020 12:30:55',
+                text: 'Per che ora pensi potremmo trovarci?',
+                status: 'sent',
+                active: false,
+    
+
+            },
+            {
+                date: '17/01/2020 13:50:00',
+                text: '20:30 potrebbe andare bene?',
+                status: 'received',
+                active: false,
+            
+
+            },
+            {
+                date: '17/01/2020 14:20:55',
+                text: 'Perfetto allora ci vediamo dopo =)',
+                status: 'sent',
+                active: false,
+    
+
+            },
+        ],
+    },
+    {
+        name: 'Omar',
+        avatar: '5',
+        visible: true,
+        messages: [
+            {
+                date: '21/01/2020 19:30:55',
+                text: 'Senti la smetti di darmi fastidio???',
+                status: 'sent',
+                active: false,
+    
+
+            },
+            {
+                date: '21/01/2020 19:32:00',
+                text: 'Ma mi hai sctitto tu!!!',
+                status: 'received',
+                active: false,
+            
+
+            },
+            {
+                date: '21/01/2020 19:50:55',
+                text: 'Ecco vedi che mi dai fastidio !!! XD',
+                status: 'sent',
+                active: false,
+    
+
+            },
+        ],
+    },
+    {
+        name: 'Tommy',
+        avatar: '7',
+        visible: true,
+        messages: [
+            {
+                date: '28/01/2020 21:30:55',
+                text: 'Tommy devo dirti una cosa...',
+                status: 'sent',
+                active: false,
+    
+
+            },
+            {
+                date: '28/01/2020 21:32:00',
+                text: 'ok, dimmi',
+                status: 'received',
+                active: false,
+            
+
+            },
+            {
+                date: '28/01/2020 21:34:55',
+                text: 'Sono follemente innamorata di te...',
+                status: 'sent',
+                active: false,
+    
+
+            },
+            {
+                date: '28/01/2020 21:36:00',
+                text: 'mi dispiace ma sono già impegnato',
+                status: 'received',
+                active: false,
+            
+
+            },
+            {
+                date: '28/01/2020 21:40:55',
+                text: 'Ok... beh mi dispiace, non per te ovviamente (anzi forse un po) ma per me... forse ho aspettato troppo a dirtelo...  ',
+                status: 'sent',
+                active: false,
+    
+
+            },
+        ],
+    },
+    {
+        name: 'CORSO CERAMICA',
+        avatar: '8',
+        visible: true,
+        messages: [
+            {
+                date: '30/01/2020 11:30:55',
+                text: 'Quando inizia il corso di ceramica?',
+                status: 'sent',
+                active: false,
+    
+
+            },
+            {
+                date: '28/01/2020 11:42:00',
+                text: 'Fra una settimana, ma le iscrizioni sono ancora aperte',
+                status: 'received',
+                active: false,
+            
+
+            },
+            {
+                date: '28/01/2020 11:54:55',
+                text: 'Ok le faccio sapere stasera..',
+                status: 'sent',
+                active: false,
+    
+
+            },
+        ],
+    },
+
+
 ];

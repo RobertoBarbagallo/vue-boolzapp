@@ -13,13 +13,13 @@ const app = new Vue({
     computed: {
         getLastAccess() {
             if (!this.clickedUser.messages) {
-                return "";
+                return ;
             }
             const receivedMsgs = this.clickedUser.messages.filter(msgs => msgs.status === "received");
 
 
             if (receivedMsgs.length == 0) {
-                return "";
+                return ;
             }
 
             const lastAccess = receivedMsgs[receivedMsgs.length - 1].date;
@@ -72,11 +72,11 @@ const app = new Vue({
 
         getUserLastMsg(user) {
             if (!this.clickedUser.messages) {
-                return "";
+                return ;
             }
             const receivedMsgs = user.messages.filter(msgs => msgs.status === "received");
             if (receivedMsgs.length == 0) {
-                return "";
+                return ;
             }
 
             let msg = receivedMsgs[receivedMsgs.length - 1];
@@ -95,7 +95,7 @@ const app = new Vue({
             const receivedMsgs = user.messages.filter(msgs => msgs.status === "received");
 
             if (receivedMsgs.length == 0) {
-                return "";
+                return ;
             }
 
             const lastAccess = receivedMsgs[receivedMsgs.length - 1].date;

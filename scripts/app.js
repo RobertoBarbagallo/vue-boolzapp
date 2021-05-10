@@ -132,7 +132,7 @@ const app = new Vue({
             this.control = !this.control
         },
 
-        counterControl(){
+        controlControl(){
             if(this.control === false){
                 return true
             }else{

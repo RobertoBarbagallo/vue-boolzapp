@@ -6,6 +6,7 @@
 
 body{
     background-color: #D9DCD4;
+    user-select: none;
 }
 
 header{

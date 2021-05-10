@@ -72,11 +72,26 @@ aside{
 }
 
 .notifications{
-    background-color: #9CE1FF;
     height: 60px;
     display: flex;
     align-items: center;
     padding: 5px;
+}
+
+.silent{
+    background-color: #9CE1FF;
+}
+
+.silent-text{
+    color: #9CE1FF;
+}
+
+.active{
+    background-color: lightgreen;
+}
+
+.active-text{
+    color: lightgreen;
 }
 
 .bellcontainer{
@@ -90,7 +105,7 @@ aside{
 }
 
 .bellcontainer i{
-    color: #9CE1FF;
+
 }
 
 .textcontainer{

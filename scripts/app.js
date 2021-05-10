@@ -6,7 +6,7 @@ const app = new Vue({
         userMessage: "",
         timeOut: null,
         searchedUser: "",
-        counter: 0
+        control: false
 
     },
 
@@ -129,11 +129,11 @@ const app = new Vue({
         },
 
         notSwitch() {
-            this.counter += 1
+            this.control = !this.control
         },
 
         counterControl(){
-            if(this.counter % 2 === 0){
+            if(this.control === false){
                 return true
             }else{
                 return false

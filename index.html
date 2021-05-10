@@ -31,13 +31,21 @@
                         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="notifications">
+                <div  @click="notSwitch()" :class="counterControl() ? 'silent' : 'active'" class="notifications">
                     <div class="bellcontainer">
-                        <i class="fa fa-bell-slash" aria-hidden="true"></i>
+
+                        <i v-if=(counterControl()) class="fa fa-bell-slash silent-text" aria-hidden="true"></i>
+
+
+                        <i v-else v class="fa fa-bell active-text" aria-hidden="true"></i>
+
                     </div>
-                    <div class="textcontainer">
+                    <div v-if=(counterControl()) class="textcontainer">
                         <h4>Ricevi notifiche di nuovi messaggi</h4>
                         <p>Attiva notifiche desktop</p>
+                    </div>
+                    <div v-else class="textcontainer">
+                        <h4>Notifiche Attive</h4>
                     </div>
                 </div>
                 <div class="inputcontainer">

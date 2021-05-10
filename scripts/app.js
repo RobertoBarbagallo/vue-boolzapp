@@ -136,7 +136,7 @@ const app = new Vue({
             if(this.control === false){
                 return true
             }else{
-                return false
+                return ""
             }
         }
 
